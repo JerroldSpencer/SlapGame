@@ -5,27 +5,37 @@ let hits = 0;
 function slap() {
   if (health <= 100) {
     health--
-    alert(health);
+    upCount()
+    update()
+    console.log(hits);
   }
 }
 function punch() {
   if (health <= 100) {
     health = health - 5;
-    console.log(health);
-    alert(health);
+    upCount()
+    update()
+    console.log(hits);
   }
 }
 function kick() {
   if (health <= 100) {
     health = health - 10;
-    console.log(health);
-    alert(health);
+    upCount()
+    update()
+    console.log(hits);
   }
 }
 
-function update() {
-
-  document.getElementById("health").innerText
+function upCount() {
+  hits++
 }
+function update() {
+  var healthId = document.getElementById("health");
+  healthId.innerHTML = health.toString();
+  var hitsId = document.getElementById("hits");
+  hitsId.innerHTML = hits.toString();
+}
+
 
 update()
