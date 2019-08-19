@@ -8,19 +8,21 @@ function slap() {
 }
 function punch() {
   if (health <= 100) {
-    health - 5
-    //alert(health);
+    health = health - 5;
+    console.log(health);
+    alert(health);
   }
 }
 function kick() {
   if (health <= 100) {
-    health - 10
-    //alert(health);
+    health = health - 10;
+    console.log(health);
+    alert(health);
   }
 }
 
 function update() {
-  let health = document.getElementById("health");
+  document.getElementById("health");
 }
 
 update()
