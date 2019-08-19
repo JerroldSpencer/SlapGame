@@ -1,12 +1,27 @@
 <html>
+
 <head>
+
+	<link rel="stylesheet" href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+	<link rel="stylesheet" href="game.css">
 	<title>Slap Object Game</title>
-	<link rel="stylesheet" href="">
-	<link rel="stylesheet" href="">
-	
+
 </head>
+
 <body>
-	
-	<script src=""></script>
+
+	<div class="container">
+		<h1><span>Health:<span id="#health">--</span></span></h1>
+		<img src="https://cdn.pixabay.com/photo/2013/07/12/11/57/stick-man-144990_960_720.png" class="mx-auto d-block"
+			style="width: 200px;">
+		<div id="footer"><button class="btn btn-primary" onclick=slap()>Slap</button></div>
+		<div id="footer"><button class="btn btn-primary" onclick=punch()>Punch</button></div>
+		<div id="footer"><button class="btn btn-primary" onclick=kick()>Kick</button></div>
+	</div>
+
+
+	<script src="game.css"></script>
+	<script src="game.js"></script>
 </body>
+
 </html>
