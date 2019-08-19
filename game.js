@@ -1,4 +1,6 @@
-let health = 100
+let health = 100;
+let hits = 0;
+let name = 0;
 
 function slap() {
   if (health <= 100) {
