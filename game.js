@@ -1,6 +1,9 @@
+let user = {
+  health: 100,
+  hits: 0,
+  items: []
+}
 
-let health = 100
-let hits = 0
 
 let items = {
   fire: { name: 'Fire', modifier: 2, description: 'IT BURNS!' },
@@ -8,39 +11,53 @@ let items = {
   shield: { name: 'Shield', modifier: 2, description: 'Leave me alone' }
 }
 
+function giveFire() {
+  user.items.push(items.fire)
+}
+function givePotion() {
+  user.items.push(items.potion)
+}
+function giveshield() {
+  user.items.push(items.shield)
+}
+
+function addMods() {
+
+}
+
 function slap() {
-  if (health <= 100) {
-    health--
+  if (user.health <= 100) {
+    user.health--
     upCount()
     update()
-    console.log(hits);
+    console.log(user.hits);
   }
 }
 function punch() {
-  if (health <= 100) {
-    health = health - 5;
+  if (user.health <= 100) {
+    user.health = user.health - 5;
     upCount()
     update()
-    console.log(hits);
+    console.log(user.hits);
   }
 }
 function kick() {
-  if (health <= 100) {
-    health = health - 10;
+  if (user.health <= 100) {
+    user.health = user.health - 10;
     upCount()
     update()
-    console.log(hits);
+    console.log(user.hits);
   }
 }
 
 function upCount() {
-  hits++
+  user.hits++
 }
 function update() {
   var healthId = document.getElementById("health");
-  healthId.innerHTML = health.toString();
+  healthId.innerHTML = user.health.toString();
   var hitsId = document.getElementById("hits");
-  hitsId.innerHTML = hits.toString();
+  hitsId.innerHTML = user.hits.toString();
 }
 
 
